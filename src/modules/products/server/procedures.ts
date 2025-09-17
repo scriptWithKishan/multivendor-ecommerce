@@ -1,5 +1,5 @@
 import z from "zod";
-import type { Where } from "payload";
+import { hasWhereAccessResult, type Where } from "payload";
 
 import { Category } from "@/payload-types";
 
@@ -19,12 +19,14 @@ export const productsRouter = createTRPCRouter({
 
       if (input.minPrice) {
         where.price = {
+          ...where.price,
           greater_than_equal: input.minPrice,
         };
       }
 
       if (input.maxPrice) {
         where.price = {
+          ...where.price,
           less_than_equal: input.maxPrice,
         };
       }
