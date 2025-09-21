@@ -120,7 +120,7 @@ export const SignInView = () => {
                 type="submit"
                 size="lg"
                 variant="elevated"
-                className="bg-black text-white hover:bg-cyan-400 hover:text-primary"
+                className="bg-black text-white hover:bg-cyan-400 disabled:bg-neutral-600 hover:text-primary"
               >
                 Login
               </Button>

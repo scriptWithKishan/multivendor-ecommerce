@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+import { useTRPC } from "@/trpc/client";
+import { useQuery } from "@tanstack/react-query";
+
 import {
   Sheet,
   SheetContent,
@@ -20,6 +23,9 @@ interface SidebarProps {
 }
 
 export const NavbarSidebar = ({ items, open, onOpenChange }: SidebarProps) => {
+  const trpc = useTRPC();
+  const session = useQuery(trpc.auth.session.queryOptions());
+
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="left" className="p-0 transition-none">
@@ -38,20 +44,32 @@ export const NavbarSidebar = ({ items, open, onOpenChange }: SidebarProps) => {
             </Link>
           ))}
           <div className="border-t">
-            <Link
-              onClick={() => onOpenChange(false)}
-              className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
-              href="/sign-in"
-            >
-              Log in
-            </Link>
-            <Link
-              onClick={() => onOpenChange(false)}
-              className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
-              href="/sign-up"
-            >
-              Start selling
-            </Link>
+            {session.data?.user ? (
+              <Link
+                onClick={() => onOpenChange(false)}
+                className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
+                href="/admin"
+              >
+                Dashboard
+              </Link>
+            ) : (
+              <>
+                <Link
+                  onClick={() => onOpenChange(false)}
+                  className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
+                  href="/sign-in"
+                >
+                  Log in
+                </Link>
+                <Link
+                  onClick={() => onOpenChange(false)}
+                  className="w-full text-left p-4 hover:bg-black hover:text-white flex items-center text-base font-medium"
+                  href="/sign-up"
+                >
+                  Start selling
+                </Link>
+              </>
+            )}
           </div>
         </ScrollArea>
       </SheetContent>
