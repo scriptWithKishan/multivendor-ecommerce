@@ -8,6 +8,7 @@
         "@payloadcms/db-mongodb": "3.33.0",
         "@payloadcms/next": "3.33.0",
         "@payloadcms/payload-cloud": "3.33.0",
+        "@payloadcms/plugin-multi-tenant": "3.33.0",
         "@radix-ui/react-accordion": "^1.2.11",
         "@radix-ui/react-alert-dialog": "^1.1.14",
         "@radix-ui/react-aspect-ratio": "^1.1.7",
@@ -425,6 +426,8 @@
     "@payloadcms/next": ["@payloadcms/next@3.33.0", "https://registry.npmmirror.com/@payloadcms/next/-/next-3.33.0.tgz", { "dependencies": { "@dnd-kit/core": "6.0.8", "@payloadcms/graphql": "3.33.0", "@payloadcms/translations": "3.33.0", "@payloadcms/ui": "3.33.0", "busboy": "^1.6.0", "dequal": "2.0.3", "file-type": "19.3.0", "graphql-http": "^1.22.0", "graphql-playground-html": "1.6.30", "http-status": "2.1.0", "path-to-regexp": "6.3.0", "qs-esm": "7.0.2", "react-diff-viewer-continued": "4.0.5", "sass": "1.77.4", "uuid": "10.0.0" }, "peerDependencies": { "graphql": "^16.8.1", "next": "^15.2.3", "payload": "3.33.0" } }, "sha512-gdiMalPLmzUJaRfBU4hWMNbEktXkc7Xqh/40h1FJ5sORl68/mYz8H9I0SqmLNe2jXAEEfptUwTwVPF9LTv2l7A=="],
 
     "@payloadcms/payload-cloud": ["@payloadcms/payload-cloud@3.33.0", "https://registry.npmmirror.com/@payloadcms/payload-cloud/-/payload-cloud-3.33.0.tgz", { "dependencies": { "@aws-sdk/client-cognito-identity": "^3.614.0", "@aws-sdk/client-s3": "^3.614.0", "@aws-sdk/credential-providers": "^3.614.0", "@aws-sdk/lib-storage": "^3.614.0", "@payloadcms/email-nodemailer": "3.33.0", "amazon-cognito-identity-js": "^6.1.2", "nodemailer": "6.9.16" }, "peerDependencies": { "payload": "3.33.0" } }, "sha512-M6Sw1klt0SnTAX0p0uspGB+3aaGV4pU51xH0pXisw88ODj6lihYaXd4UTWhURSxAm1IzrJoimc8s8ClqNGuxfg=="],
+
+    "@payloadcms/plugin-multi-tenant": ["@payloadcms/plugin-multi-tenant@3.33.0", "https://registry.npmmirror.com/@payloadcms/plugin-multi-tenant/-/plugin-multi-tenant-3.33.0.tgz", { "peerDependencies": { "@payloadcms/ui": "3.33.0", "next": "^15.2.3", "payload": "3.33.0" } }, "sha512-4E7V1JGrgGge14v/BGGGovI92yM7gmahvCsTcKXZPTDYrv9/0fbTF4i3eTht38YDvwzy+h0oyGEH6jgz1Lesgg=="],
 
     "@payloadcms/translations": ["@payloadcms/translations@3.33.0", "https://registry.npmmirror.com/@payloadcms/translations/-/translations-3.33.0.tgz", { "dependencies": { "date-fns": "4.1.0" } }, "sha512-QU8EFoporBLdyeGWoWogb6gZMEMopvFHmF43yQDa2TrzWxGtEaSY5pNCvJovQN1aPnLPYaK4we/nX/3ifa4G5Q=="],
 
